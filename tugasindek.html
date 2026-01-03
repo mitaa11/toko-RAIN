@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>CRUD Data Barang</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h2>CRUD Data Barang</h2>
+
+    <form id="formBarang">
+        <input type="hidden" id="id">
+
+        <label>Nama Barang</label>
+        <input type="text" id="nama">
+        <small class="error" id="errorNama"></small>
+
+        <label>Jenis Barang</label>
+        <select id="jenis">
+            <option value="">-- Pilih Jenis --</option>
+            <option value="Elektronik">Elektronik</option>
+            <option value="Pakaian">Pakaian</option>
+            <option value="Makanan">Makanan</option>
+            <option value="Alat Tulis">Alat Tulis</option>
+        </select>
+        <small class="error" id="errorJenis"></small>
+
+        <label>Harga (Rp)</label>
+        <input type="number" id="harga">
+        <small class="error" id="errorHarga"></small>
+
+        <label>Stok</label>
+        <input type="number" id="stok">
+        <small class="error" id="errorStok"></small>
+
+        <button type="submit">Simpan</button>
+        <button type="reset" class="btn-batal">Batal</button>
+    </form>
+
+    <table>
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>Nama</th>
+                <th>Jenis</th>
+                <th>Harga</th>
+                <th>Stok</th>
+                <th>Aksi</th>
+            </tr>
+        </thead>
+        <tbody id="tbody"></tbody>
+    </table>
+</div>
+
+<script src="tugasScript.js"></script>
+</body>
+</html>
